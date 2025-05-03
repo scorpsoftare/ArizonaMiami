@@ -20,7 +20,7 @@
 		<header class="header">
 			<div class="header__container">
 				<a href="#" class="header__logo">
-					<img src=https://sun9-47.userapi.com/impg/-dpk-9JntV_MxiMHy42pVHsu3NYRKySxvzl_rA/PxRIqK4BUt4.jpg?size=1024x1024&quality=95&sign=1570036eeb10d3236799cc9d3a242c3a&type=album" alt="logo" width="185" height="70" title="Arizona MIAMI🌴">
+					<img src="https://sun9-47.userapi.com/impg/-dpk-9JntV_MxiMHy42pVHsu3NYRKySxvzl_rA/PxRIqK4BUt4.jpg?size=1024x1024&quality=95&sign=1570036eeb10d3236799cc9d3a242c3a&type=album" alt="logo" width="185" height="70" title="Arizona MIAMI🌴">
 				</a>
 				<div class="header__menu menu">
 					<div class="menu__icon">
@@ -53,6 +53,16 @@
 			</div>
 		</main>
 
+		<!-- Блок выбора платформы -->
+		<section class="launcher-choice" style="text-align: center; margin-top: 40px;">
+			<h2 style="color: white;">Выберите платформу:</h2>
+			<div style="margin: 15px;">
+				<button id="pcBtn" style="background-color: #7900ff; color: white; border: none; padding: 10px 20px; margin-right: 10px; border-radius: 10px; cursor: pointer;">ПК</button>
+				<button id="mobileBtn" style="background-color: #7900ff; color: white; border: none; padding: 10px 20px; border-radius: 10px; cursor: pointer;">Мобайл</button>
+			</div>
+			<div id="launcherAction" style="margin-top: 20px;"></div>
+		</section>
+
 		<footer class="footer">
 			<p class="h-footer">Arizona Miami © Copyright</p>
 			<p class="h-footer-support">
@@ -70,5 +80,21 @@
 			</section>
 		</footer>
 	</div>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			const pcBtn = document.getElementById("pcBtn");
+			const mobileBtn = document.getElementById("mobileBtn");
+			const launcherAction = document.getElementById("launcherAction");
+
+			pcBtn.addEventListener("click", () => {
+				launcherAction.innerHTML = `<a href="https://host.limonchyk-channel.ru/launcher/list_launchers/download/loc2835/Arizona_PC_loc2835.zip" style="display: inline-block; background-color: #7900ff; color: white; padding: 12px 25px; border-radius: 10px; text-decoration: none;">Установить</a>`;
+			});
+
+			mobileBtn.addEventListener("click", () => {
+				launcherAction.innerHTML = `<p style="color: white; font-size: 18px;">Скоро...</p>`;
+			});
+		});
+	</script>
 </body>
 </html>
